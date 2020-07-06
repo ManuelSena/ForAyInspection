@@ -4,7 +4,7 @@ export const Home = () => {
         React.createElement("header", { className: "masthead" },
             React.createElement("div", { className: "container" },
                 React.createElement("div", { className: "masthead-subheading" }, "Limited Liability Company"),
-                React.createElement("div", { className: "masthead-heading text-uppercase" }, "Foray Inspections"),
+                React.createElement("div", { className: "masthead-heading text-uppercase" }, "Foray Inspection"),
                 React.createElement("a", { className: "btn btn-primary btn-xl text-uppercase js-scroll-trigger", href: "#contact" }, "Contact"))),
         React.createElement("section", { style: { color: "#fff" }, className: "page-section", id: "services" },
             React.createElement("div", { className: "container" },

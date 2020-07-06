@@ -92,3 +92,4 @@ C:\Projects\ForAyInspection\ForAyInspection\obj\Debug\ForAyInspection.csproj.Cor
 C:\Projects\ForAyInspection\ForAyInspection\obj\Debug\ForAyInspection.csproj.CopyComplete
 C:\Projects\ForAyInspection\ForAyInspection\obj\Debug\ForAyInspection.dll
 C:\Projects\ForAyInspection\ForAyInspection\obj\Debug\ForAyInspection.pdb
+C:\Projects\ForAyInspection\ForAyInspection\obj\Debug\ForAyInspection.csprojResolveAssemblyReference.cache
