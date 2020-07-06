@@ -75,20 +75,20 @@ module.exports = {
             {
                 test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
                 loader: 'url-loader?limit=100000'
-            }
+            },
         ],
 
 
     },
     devtool: "inline-source-map",
     plugins: [
-        new HtmlWebpackPlugin({
-            filename: "index.html",
-            template: "index.html",
-            hash: true,
-        }),
-        new webpack.optimize.CommonsChunkPlugin({
-            names: ["vendor", "manifest"],
-        })
+       new HtmlWebpackPlugin({
+                filename: "index.html",
+                template: path.resolve('index.html'),
+                //hash: true,
+            }),
+            new webpack.optimize.CommonsChunkPlugin({
+                names: ["vendor", "manifest"],
+            })
     ]
 };
