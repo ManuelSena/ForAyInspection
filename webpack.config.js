@@ -12,8 +12,8 @@ module.exports = {
         extensions: ['.jsx', '.tsx', '.js']
     },
     entry: {
-        app: "./index.tsx",
-        appStyles: "./css/site.css",
+        app: "/index.tsx",
+        appStyles: "/css/site.css",
         vendor: [
             "bootstrap",
             "react",
