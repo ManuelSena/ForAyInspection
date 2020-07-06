@@ -13,7 +13,7 @@ module.exports = {
     },
     entry: {
         app: "/index.tsx",
-        appStyles: "/css/site.css",
+        appStyles: "src/css/site.css",
         vendor: [
             "bootstrap",
             "react",
