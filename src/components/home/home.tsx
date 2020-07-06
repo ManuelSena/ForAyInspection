@@ -7,7 +7,7 @@ export const Home: React.StatelessComponent<{}> = () => {
             <header className="masthead">
                 <div className="container">
                     <div className="masthead-subheading">Limited Liability Company</div>
-                    <div className="masthead-heading text-uppercase">ForAy Inspections</div>
+                    <div className="masthead-heading text-uppercase">Foray Inspection</div>
                     <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#contact">Contact</a>
                 </div>
             </header>
@@ -22,12 +22,10 @@ export const Home: React.StatelessComponent<{}> = () => {
                             <h4 className="my-3">Certified Welding Inspector</h4>
                             <p className="text-muted">License#: 1911311</p>
                         </div>
-                        <div className="vertical-row"></div>
                         <div className="col-md-4 cali">
                             <h4 className="my-3 ">Southern Califonia Regional</h4>
                             <p className="text-muted">Greater Los Angeles Area</p>
                         </div>
-                        <div className="vertical-row"></div>
                         <div className="col-md-4 vetpwnd">
                             <h4 className="my-3">Vet Owned</h4>
                             <p className="text-muted">The owner has contributed his own life for and on the very soil you require inspecting. Allow to let him give your peice of mind reign. </p>
@@ -44,7 +42,7 @@ export const Home: React.StatelessComponent<{}> = () => {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="team-member">
-                                <img className="mx-auto rounded-circle" src="assets/img/124754cdb18130f1bbdcd40d2e18208a--mr-bean-so-funny.png" alt="" />
+                                <img className="mx-auto rounded-circle" src="assets/img/mrbeansofunny.png" alt="" />
                                 <h4>Anthony "AyOne" Ramirez</h4>
                                 <p className="text-muted">Owner</p>
                                 <a className="btn btn-dark btn-social mx-2" href="#!"><i className="fa fa-twitter"></i></a>
@@ -65,36 +63,14 @@ export const Home: React.StatelessComponent<{}> = () => {
                 <div className="container">
                     <div className="text-center">
                         <h2 className="section-heading text-uppercase">Contact Us</h2>
-                        <h3 className="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                        <h3 className="section-subheading text-muted">Feel free to give us a call or email.</h3>
+                        <h4 style={{ color: "white" }}>Anthony Ramirez</h4>
+                        <a href="tel:5624566001">Phone: (562) 456-6001</a>
+                        <br/>
+                        <a href="mailto:dispatch@forayinspection.com?subject=Contact">Dispatch@ForayInspection.com</a>
+
                     </div>
-                    <form id="contactForm" name="sentMessage">
-                        <div className="row align-items-stretch mb-5">
-                            <div className="col-md-6">
-                                <div className="form-group">
-                                    <input className="form-control" id="name" type="text" placeholder="Your Name *" data-validation-required-message="Please enter your name." />
-                                    <p className="help-block text-danger"></p>
-                                </div>
-                                <div className="form-group">
-                                    <input className="form-control" id="email" type="email" placeholder="Your Email *" data-validation-required-message="Please enter your email address." />
-                                    <p className="help-block text-danger"></p>
-                                </div>
-                                <div className="form-group mb-md-0">
-                                    <input className="form-control" id="phone" type="tel" placeholder="Your Phone *" data-validation-required-message="Please enter your phone number." />
-                                    <p className="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div className="col-md-4">
-                                <div className="form-group form-group-textarea mb-md-0">
-                                    <textarea className="form-control" id="message" placeholder="Your Message *" data-validation-required-message="Please enter a message."></textarea>
-                                    <p className="help-block text-danger"></p>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="text-center">
-                            <div id="success"></div>
-                            <button className="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Send Message</button>
-                        </div>
-                    </form>
+                    
                 </div>
             </section>
 
