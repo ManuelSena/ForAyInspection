@@ -123,7 +123,6 @@ address {
     background-attachment: scroll;
     background-position: left;
     background-size: 25%;
-    
     background-image: url('../../assets/img/clipartAWS.png');
 }
 
@@ -143,7 +142,6 @@ address {
     background-position: left;
     background-size: 20%;
     background-image: url('../../assets/img/navy.png');
-    
 }
 
     .vetpwnd h4 {
@@ -162,7 +160,6 @@ address {
     background-position: left;
     background-size: 15%;
     background-image: url('../../assets/img/californiaclipart.png');
-    
 }
 
     .cali h4 {
@@ -10084,7 +10081,6 @@ header.masthead {
     text-align: center;
     color: #fff;
     background-image: url('../../assets/img/4a.gif');
-
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
@@ -10159,7 +10155,6 @@ header.masthead {
 }*/
 #contact {
     background-color: #212529;
-    background-image: url("../assets/img/map-image.png");
     background-repeat: no-repeat;
     background-position: center;
 }
