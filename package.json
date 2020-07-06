@@ -4,7 +4,8 @@
   "description": "Elicit INC 2020",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --mode production"
+    "start": "webpack --mode production",
+    "prebuild": "rm -rf dist"
   },
   "dependencies": {
     "axios": "^0.18.0",
