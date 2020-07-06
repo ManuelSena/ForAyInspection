@@ -406,8 +406,8 @@ intellisense.annotate(jQuery, {
   },
   'type': function() {
     /// <signature>
-    ///   <summary>Determine the internal JavaScript [[Class]] of an object.</summary>
-    ///   <param name="obj" type="PlainObject">Object to get the internal JavaScript [[Class]] of.</param>
+    ///   <summary>Determine the internal JavaScript [[className]] of an object.</summary>
+    ///   <param name="obj" type="PlainObject">Object to get the internal JavaScript [[className]] of.</param>
     ///   <returns type="String" />
     /// </signature>
   },
@@ -751,15 +751,15 @@ intellisense.annotate(jQuery.fn, {
     ///   <returns type="jQuery" />
     /// </signature>
   },
-  'addClass': function() {
+  'addclassName': function() {
     /// <signature>
-    ///   <summary>Adds the specified class(es) to each of the set of matched elements.</summary>
-    ///   <param name="className" type="String">One or more space-separated classes to be added to the class attribute of each matched element.</param>
+    ///   <summary>Adds the specified className(es) to each of the set of matched elements.</summary>
+    ///   <param name="classNameName" type="String">One or more space-separated classNamees to be added to the className attribute of each matched element.</param>
     ///   <returns type="jQuery" />
     /// </signature>
     /// <signature>
-    ///   <summary>Adds the specified class(es) to each of the set of matched elements.</summary>
-    ///   <param name="function(index, currentClass)" type="Function">A function returning one or more space-separated class names to be added to the existing class name(s). Receives the index position of the element in the set and the existing class name(s) as arguments. Within the function, this refers to the current element in the set.</param>
+    ///   <summary>Adds the specified className(es) to each of the set of matched elements.</summary>
+    ///   <param name="function(index, currentclassName)" type="Function">A function returning one or more space-separated className names to be added to the existing className name(s). Receives the index position of the element in the set and the existing className name(s) as arguments. Within the function, this refers to the current element in the set.</param>
     ///   <returns type="jQuery" />
     /// </signature>
   },
@@ -1029,10 +1029,10 @@ intellisense.annotate(jQuery.fn, {
     ///   <returns type="jQuery" />
     /// </signature>
   },
-  'class': function() {
+  'className': function() {
     /// <signature>
-    ///   <summary>Selects all elements with the given class.</summary>
-    ///   <param name="class" type="String">A class to search for. An element can have multiple classes; only one of them must match.</param>
+    ///   <summary>Selects all elements with the given className.</summary>
+    ///   <param name="className" type="String">A className to search for. An element can have multiple classNamees; only one of them must match.</param>
     /// </signature>
   },
   'clearQueue': function() {
@@ -1460,10 +1460,10 @@ intellisense.annotate(jQuery.fn, {
     ///   <returns type="jQuery" />
     /// </signature>
   },
-  'hasClass': function() {
+  'hasclassName': function() {
     /// <signature>
-    ///   <summary>Determine whether any of the matched elements are assigned the given class.</summary>
-    ///   <param name="className" type="String">The class name to search for.</param>
+    ///   <summary>Determine whether any of the matched elements are assigned the given className.</summary>
+    ///   <param name="classNameName" type="String">The className name to search for.</param>
     ///   <returns type="Boolean" />
     /// </signature>
   },
@@ -2173,15 +2173,15 @@ intellisense.annotate(jQuery.fn, {
     ///   <returns type="jQuery" />
     /// </signature>
   },
-  'removeClass': function() {
+  'removeclassName': function() {
     /// <signature>
-    ///   <summary>Remove a single class, multiple classes, or all classes from each element in the set of matched elements.</summary>
-    ///   <param name="className" type="String">One or more space-separated classes to be removed from the class attribute of each matched element.</param>
+    ///   <summary>Remove a single className, multiple classNamees, or all classNamees from each element in the set of matched elements.</summary>
+    ///   <param name="classNameName" type="String">One or more space-separated classNamees to be removed from the className attribute of each matched element.</param>
     ///   <returns type="jQuery" />
     /// </signature>
     /// <signature>
-    ///   <summary>Remove a single class, multiple classes, or all classes from each element in the set of matched elements.</summary>
-    ///   <param name="function(index, class)" type="Function">A function returning one or more space-separated class names to be removed. Receives the index position of the element in the set and the old class value as arguments.</param>
+    ///   <summary>Remove a single className, multiple classNamees, or all classNamees from each element in the set of matched elements.</summary>
+    ///   <param name="function(index, className)" type="Function">A function returning one or more space-separated className names to be removed. Receives the index position of the element in the set and the old className value as arguments.</param>
     ///   <returns type="jQuery" />
     /// </signature>
   },
@@ -2471,27 +2471,27 @@ intellisense.annotate(jQuery.fn, {
     ///   <returns type="jQuery" />
     /// </signature>
   },
-  'toggleClass': function() {
+  'toggleclassName': function() {
     /// <signature>
-    ///   <summary>Add or remove one or more classes from each element in the set of matched elements, depending on either the class's presence or the value of the switch argument.</summary>
-    ///   <param name="className" type="String">One or more class names (separated by spaces) to be toggled for each element in the matched set.</param>
+    ///   <summary>Add or remove one or more classNamees from each element in the set of matched elements, depending on either the className's presence or the value of the switch argument.</summary>
+    ///   <param name="classNameName" type="String">One or more className names (separated by spaces) to be toggled for each element in the matched set.</param>
     ///   <returns type="jQuery" />
     /// </signature>
     /// <signature>
-    ///   <summary>Add or remove one or more classes from each element in the set of matched elements, depending on either the class's presence or the value of the switch argument.</summary>
-    ///   <param name="className" type="String">One or more class names (separated by spaces) to be toggled for each element in the matched set.</param>
-    ///   <param name="switch" type="Boolean">A Boolean (not just truthy/falsy) value to determine whether the class should be added or removed.</param>
+    ///   <summary>Add or remove one or more classNamees from each element in the set of matched elements, depending on either the className's presence or the value of the switch argument.</summary>
+    ///   <param name="classNameName" type="String">One or more className names (separated by spaces) to be toggled for each element in the matched set.</param>
+    ///   <param name="switch" type="Boolean">A Boolean (not just truthy/falsy) value to determine whether the className should be added or removed.</param>
     ///   <returns type="jQuery" />
     /// </signature>
     /// <signature>
-    ///   <summary>Add or remove one or more classes from each element in the set of matched elements, depending on either the class's presence or the value of the switch argument.</summary>
-    ///   <param name="switch" type="Boolean">A boolean value to determine whether the class should be added or removed.</param>
+    ///   <summary>Add or remove one or more classNamees from each element in the set of matched elements, depending on either the className's presence or the value of the switch argument.</summary>
+    ///   <param name="switch" type="Boolean">A boolean value to determine whether the className should be added or removed.</param>
     ///   <returns type="jQuery" />
     /// </signature>
     /// <signature>
-    ///   <summary>Add or remove one or more classes from each element in the set of matched elements, depending on either the class's presence or the value of the switch argument.</summary>
-    ///   <param name="function(index, class, switch)" type="Function">A function that returns class names to be toggled in the class attribute of each element in the matched set. Receives the index position of the element in the set, the old class value, and the switch as arguments.</param>
-    ///   <param name="switch" type="Boolean">A boolean value to determine whether the class should be added or removed.</param>
+    ///   <summary>Add or remove one or more classNamees from each element in the set of matched elements, depending on either the className's presence or the value of the switch argument.</summary>
+    ///   <param name="function(index, className, switch)" type="Function">A function that returns className names to be toggled in the className attribute of each element in the matched set. Receives the index position of the element in the set, the old className value, and the switch as arguments.</param>
+    ///   <param name="switch" type="Boolean">A boolean value to determine whether the className should be added or removed.</param>
     ///   <returns type="jQuery" />
     /// </signature>
   },

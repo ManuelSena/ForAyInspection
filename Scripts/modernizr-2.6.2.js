@@ -32,7 +32,7 @@
 /*
  * Modernizr tests which native CSS3 and HTML5 features are available in
  * the current UA and makes the results available to you in two ways:
- * as properties on a global Modernizr object, and as classes on the
+ * as properties on a global Modernizr object, and as classNamees on the
  * <html> element. This information allows you to progressively enhance
  * your pages with a granular level of control over the experience.
  *
@@ -51,10 +51,10 @@ window.Modernizr = (function( window, document, undefined ) {
 
     Modernizr = {},
 
-    /*>>cssclasses*/
-    // option for enabling the HTML classes to be added
-    enableClasses = true,
-    /*>>cssclasses*/
+    /*>>cssclassNamees*/
+    // option for enabling the HTML classNamees to be added
+    enableclassNamees = true,
+    /*>>cssclassNamees*/
 
     docElement = document.documentElement,
 
@@ -108,9 +108,9 @@ window.Modernizr = (function( window, document, undefined ) {
     inputs = {},
     attrs = {},
 
-    classes = [],
+    classNamees = [],
 
-    slice = classes.slice,
+    slice = classNamees.slice,
 
     featureName, // used in testing loop
 
@@ -966,12 +966,12 @@ window.Modernizr = (function( window, document, undefined ) {
     for ( var feature in tests ) {
         if ( hasOwnProp(tests, feature) ) {
             // run the test, throw the return value into the Modernizr,
-            //   then based on that boolean, define an appropriate className
-            //   and push it into an array of classes we'll join later.
+            //   then based on that boolean, define an appropriate classNameName
+            //   and push it into an array of classNamees we'll join later.
             featureName  = feature.toLowerCase();
             Modernizr[featureName] = tests[feature]();
 
-            classes.push((Modernizr[featureName] ? '' : 'no-') + featureName);
+            classNamees.push((Modernizr[featureName] ? '' : 'no-') + featureName);
         }
     }
 
@@ -984,7 +984,7 @@ window.Modernizr = (function( window, document, undefined ) {
     /**
      * addTest allows the user to define their own feature tests
      * the result will be added onto the Modernizr object,
-     * as well as an appropriate className set on the html element
+     * as well as an appropriate classNameName set on the html element
      *
      * @param feature - String naming the feature
      * @param test - Function returning true if feature is supported, false if not
@@ -1004,15 +1004,15 @@ window.Modernizr = (function( window, document, undefined ) {
            // we're going to quit if you're trying to overwrite an existing test
            // if we were to allow it, we'd do this:
            //   var re = new RegExp("\\b(no-)?" + feature + "\\b");
-           //   docElement.className = docElement.className.replace( re, '' );
+           //   docElement.classNameName = docElement.classNameName.replace( re, '' );
            // but, no rly, stuff 'em.
            return Modernizr;
          }
 
          test = typeof test == 'function' ? test() : test;
 
-         if (typeof enableClasses !== "undefined" && enableClasses) {
-           docElement.className += ' ' + (test ? '' : 'no-') + feature;
+         if (typeof enableclassNamees !== "undefined" && enableclassNamees) {
+           docElement.classNameName += ' ' + (test ? '' : 'no-') + feature;
          }
          Modernizr[feature] = test;
 
@@ -1403,13 +1403,13 @@ window.Modernizr = (function( window, document, undefined ) {
     /*>>prefixed*/
 
 
-    /*>>cssclasses*/
-    // Remove "no-js" class from <html> element, if it exists:
-    docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2') +
+    /*>>cssclassNamees*/
+    // Remove "no-js" className from <html> element, if it exists:
+    docElement.classNameName = docElement.classNameName.replace(/(^|\s)no-js(\s|$)/, '$1$2') +
 
-                            // Add the new classes to the <html> element.
-                            (enableClasses ? ' js ' + classes.join(' ') : '');
-    /*>>cssclasses*/
+                            // Add the new classNamees to the <html> element.
+                            (enableclassNamees ? ' js ' + classNamees.join(' ') : '');
+    /*>>cssclassNamees*/
 
     return Modernizr;
 

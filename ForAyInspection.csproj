@@ -165,6 +165,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\img\124754cdb18130f1bbdcd40d2e18208a--mr-bean-so-funny.png" />
+    <Content Include="assets\img\california-clipart-3-transparent %282%29.png" />
+    <Content Include="assets\img\clipart1838501 %281%29.png" />
+    <Content Include="assets\img\gif_temp_16130661046762.gif" />
+    <Content Include="assets\img\Screenshot_20200702-133227_Cricut_Design_Space.jpg" />
+    <Content Include="assets\img\white-black-and-yellow-lion-logo-united-states-navy-us-navy-department-military-sailor-military-png-clip-art-thumbnail.png" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -206,7 +212,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="assets\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

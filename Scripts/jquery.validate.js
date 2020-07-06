@@ -55,8 +55,8 @@ $.extend($.fn, {
 				if ( validator.settings.submitHandler ) {
 					validator.submitButton = event.target;
 				}
-				// allow suppressing validation by adding a cancel class to the submit button
-				if ( $(event.target).hasClass("cancel") ) {
+				// allow suppressing validation by adding a cancel className to the submit button
+				if ( $(event.target).hasclassName("cancel") ) {
 					validator.cancelSubmit = true;
 				}
 
@@ -167,7 +167,7 @@ $.extend($.fn, {
 		var data = $.validator.normalizeRules(
 		$.extend(
 			{},
-			$.validator.classRules(element),
+			$.validator.classNameRules(element),
 			$.validator.attributeRules(element),
 			$.validator.dataRules(element),
 			$.validator.staticRules(element)
@@ -229,8 +229,8 @@ $.extend($.validator, {
 		messages: {},
 		groups: {},
 		rules: {},
-		errorClass: "error",
-		validClass: "valid",
+		errorclassName: "error",
+		validclassName: "valid",
 		errorElement: "label",
 		focusInvalid: true,
 		errorContainer: $([]),
@@ -241,10 +241,10 @@ $.extend($.validator, {
 		onfocusin: function( element, event ) {
 			this.lastActive = element;
 
-			// hide error label and remove error class on focus if enabled
+			// hide error label and remove error className on focus if enabled
 			if ( this.settings.focusCleanup && !this.blockFocusCleanup ) {
 				if ( this.settings.unhighlight ) {
-					this.settings.unhighlight.call( this, element, this.settings.errorClass, this.settings.validClass );
+					this.settings.unhighlight.call( this, element, this.settings.errorclassName, this.settings.validclassName );
 				}
 				this.addWrapper(this.errorsFor(element)).hide();
 			}
@@ -271,18 +271,18 @@ $.extend($.validator, {
 				this.element(element.parentNode);
 			}
 		},
-		highlight: function( element, errorClass, validClass ) {
+		highlight: function( element, errorclassName, validclassName ) {
 			if ( element.type === "radio" ) {
-				this.findByName(element.name).addClass(errorClass).removeClass(validClass);
+				this.findByName(element.name).addclassName(errorclassName).removeclassName(validclassName);
 			} else {
-				$(element).addClass(errorClass).removeClass(validClass);
+				$(element).addclassName(errorclassName).removeclassName(validclassName);
 			}
 		},
-		unhighlight: function( element, errorClass, validClass ) {
+		unhighlight: function( element, errorclassName, validclassName ) {
 			if ( element.type === "radio" ) {
-				this.findByName(element.name).removeClass(errorClass).addClass(validClass);
+				this.findByName(element.name).removeclassName(errorclassName).addclassName(validclassName);
 			} else {
-				$(element).removeClass(errorClass).addClass(validClass);
+				$(element).removeclassName(errorclassName).addclassName(validclassName);
 			}
 		}
 	},
@@ -434,7 +434,7 @@ $.extend($.validator, {
 			this.lastElement = null;
 			this.prepareForm();
 			this.hideErrors();
-			this.elements().removeClass( this.settings.errorClass ).removeData( "previousValue" );
+			this.elements().removeclassName( this.settings.errorclassName ).removeData( "previousValue" );
 		},
 
 		numberOfInvalids: function() {
@@ -511,8 +511,8 @@ $.extend($.validator, {
 		},
 
 		errors: function() {
-			var errorClass = this.settings.errorClass.replace(" ", ".");
-			return $(this.settings.errorElement + "." + errorClass, this.errorContext);
+			var errorclassName = this.settings.errorclassName.replace(" ", ".");
+			return $(this.settings.errorElement + "." + errorclassName, this.errorContext);
 		},
 
 		reset: function() {
@@ -657,7 +657,7 @@ $.extend($.validator, {
 			for ( i = 0; this.errorList[i]; i++ ) {
 				var error = this.errorList[i];
 				if ( this.settings.highlight ) {
-					this.settings.highlight.call( this, error.element, this.settings.errorClass, this.settings.validClass );
+					this.settings.highlight.call( this, error.element, this.settings.errorclassName, this.settings.validclassName );
 				}
 				this.showLabel( error.element, error.message );
 			}
@@ -671,7 +671,7 @@ $.extend($.validator, {
 			}
 			if ( this.settings.unhighlight ) {
 				for ( i = 0, elements = this.validElements(); elements[i]; i++ ) {
-					this.settings.unhighlight.call( this, elements[i], this.settings.errorClass, this.settings.validClass );
+					this.settings.unhighlight.call( this, elements[i], this.settings.errorclassName, this.settings.validclassName );
 				}
 			}
 			this.toHide = this.toHide.not( this.toShow );
@@ -692,15 +692,15 @@ $.extend($.validator, {
 		showLabel: function( element, message ) {
 			var label = this.errorsFor( element );
 			if ( label.length ) {
-				// refresh error/success class
-				label.removeClass( this.settings.validClass ).addClass( this.settings.errorClass );
+				// refresh error/success className
+				label.removeclassName( this.settings.validclassName ).addclassName( this.settings.errorclassName );
 				// replace message on existing label
 				label.html(message);
 			} else {
 				// create label
 				label = $("<" + this.settings.errorElement + ">")
 					.attr("for", this.idOrName(element))
-					.addClass(this.settings.errorClass)
+					.addclassName(this.settings.errorclassName)
 					.html(message || "");
 				if ( this.settings.wrapper ) {
 					// make sure the element is visible, even in IE
@@ -718,7 +718,7 @@ $.extend($.validator, {
 			if ( !message && this.settings.success ) {
 				label.text("");
 				if ( typeof this.settings.success === "string" ) {
-					label.addClass( this.settings.success );
+					label.addclassName( this.settings.success );
 				} else {
 					this.settings.success( label, element );
 				}
@@ -819,7 +819,7 @@ $.extend($.validator, {
 
 	},
 
-	classRuleSettings: {
+	classNameRuleSettings: {
 		required: {required: true},
 		email: {email: true},
 		url: {url: true},
@@ -830,21 +830,21 @@ $.extend($.validator, {
 		creditcard: {creditcard: true}
 	},
 
-	addClassRules: function( className, rules ) {
-		if ( className.constructor === String ) {
-			this.classRuleSettings[className] = rules;
+	addclassNameRules: function( classNameName, rules ) {
+		if ( classNameName.constructor === String ) {
+			this.classNameRuleSettings[classNameName] = rules;
 		} else {
-			$.extend(this.classRuleSettings, className);
+			$.extend(this.classNameRuleSettings, classNameName);
 		}
 	},
 
-	classRules: function( element ) {
+	classNameRules: function( element ) {
 		var rules = {};
-		var classes = $(element).attr("class");
-		if ( classes ) {
-			$.each(classes.split(" "), function() {
-				if ( this in $.validator.classRuleSettings ) {
-					$.extend(rules, $.validator.classRuleSettings[this]);
+		var classNamees = $(element).attr("className");
+		if ( classNamees ) {
+			$.each(classNamees.split(" "), function() {
+				if ( this in $.validator.classNameRuleSettings ) {
+					$.extend(rules, $.validator.classNameRuleSettings[this]);
 				}
 			});
 		}
@@ -1000,7 +1000,7 @@ $.extend($.validator, {
 		$.validator.methods[name] = method;
 		$.validator.messages[name] = message !== undefined ? message : $.validator.messages[name];
 		if ( method.length < 3 ) {
-			$.validator.addClassRules(name, $.validator.normalizeRule(name));
+			$.validator.addclassNameRules(name, $.validator.normalizeRule(name));
 		}
 	},
 

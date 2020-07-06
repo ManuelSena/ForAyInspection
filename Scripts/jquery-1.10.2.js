@@ -54,8 +54,8 @@ var
 	// Map over the $ in case of overwrite
 	_$ = window.$,
 
-	// [[Class]] -> type pairs
-	class2type = {},
+	// [[className]] -> type pairs
+	className2type = {},
 
 	// List of deleted data cache ids, so we can reuse them
 	core_deletedIds = [],
@@ -67,8 +67,8 @@ var
 	core_push = core_deletedIds.push,
 	core_slice = core_deletedIds.slice,
 	core_indexOf = core_deletedIds.indexOf,
-	core_toString = class2type.toString,
-	core_hasOwn = class2type.hasOwnProperty,
+	core_toString = className2type.toString,
+	core_hasOwn = className2type.hasOwnProperty,
 	core_trim = core_version.trim,
 
 	// Define a local copy of jQuery
@@ -477,7 +477,7 @@ jQuery.extend({
 			return String( obj );
 		}
 		return typeof obj === "object" || typeof obj === "function" ?
-			class2type[ core_toString.call(obj) ] || "object" :
+			className2type[ core_toString.call(obj) ] || "object" :
 			typeof obj;
 	},
 
@@ -989,9 +989,9 @@ jQuery.ready.promise = function( obj ) {
 	return readyList.promise( obj );
 };
 
-// Populate the class2type map
+// Populate the className2type map
 jQuery.each("Boolean Number String Function Array Date RegExp Object Error".split(" "), function(i, name) {
-	class2type[ "[object " + name + "]" ] = name.toLowerCase();
+	className2type[ "[object " + name + "]" ] = name.toLowerCase();
 });
 
 function isArraylike( obj ) {
@@ -1050,7 +1050,7 @@ var i,
 	preferredDoc = window.document,
 	dirruns = 0,
 	done = 0,
-	classCache = createCache(),
+	classNameCache = createCache(),
 	tokenCache = createCache(),
 	compilerCache = createCache(),
 	hasDuplicate = false,
@@ -1125,7 +1125,7 @@ var i,
 
 	matchExpr = {
 		"ID": new RegExp( "^#(" + characterEncoding + ")" ),
-		"CLASS": new RegExp( "^\\.(" + characterEncoding + ")" ),
+		"className": new RegExp( "^\\.(" + characterEncoding + ")" ),
 		"TAG": new RegExp( "^(" + characterEncoding.replace( "w", "w*" ) + ")" ),
 		"ATTR": new RegExp( "^" + attributes ),
 		"PSEUDO": new RegExp( "^" + pseudos ),
@@ -1141,7 +1141,7 @@ var i,
 
 	rnative = /^[^{]+\{\s*\[native \w/,
 
-	// Easily-parseable/retrievable ID or TAG or CLASS selectors
+	// Easily-parseable/retrievable ID or TAG or className selectors
 	rquickExpr = /^(?:#([\w-]+)|(\w+)|\.([\w-]+))$/,
 
 	rinputs = /^(?:input|select|textarea|button)$/i,
@@ -1248,9 +1248,9 @@ function Sizzle( selector, context, results, seed ) {
 				push.apply( results, context.getElementsByTagName( selector ) );
 				return results;
 
-			// Speed-up: Sizzle(".CLASS")
-			} else if ( (m = match[3]) && support.getElementsByClassName && context.getElementsByClassName ) {
-				push.apply( results, context.getElementsByClassName( m ) );
+			// Speed-up: Sizzle(".className")
+			} else if ( (m = match[3]) && support.getElementsByclassNameName && context.getElementsByclassNameName ) {
+				push.apply( results, context.getElementsByclassNameName( m ) );
 				return results;
 			}
 		}
@@ -1491,8 +1491,8 @@ setDocument = Sizzle.setDocument = function( node ) {
 	// Support: IE<8
 	// Verify that getAttribute really returns attributes and not properties (excepting IE8 booleans)
 	support.attributes = assert(function( div ) {
-		div.className = "i";
-		return !div.getAttribute("className");
+		div.classNameName = "i";
+		return !div.getAttribute("classNameName");
 	});
 
 	/* getElement(s)By*
@@ -1504,16 +1504,16 @@ setDocument = Sizzle.setDocument = function( node ) {
 		return !div.getElementsByTagName("*").length;
 	});
 
-	// Check if getElementsByClassName can be trusted
-	support.getElementsByClassName = assert(function( div ) {
-		div.innerHTML = "<div class='a'></div><div class='a i'></div>";
+	// Check if getElementsByclassNameName can be trusted
+	support.getElementsByclassNameName = assert(function( div ) {
+		div.innerHTML = "<div className='a'></div><div className='a i'></div>";
 
 		// Support: Safari<4
-		// Catch class over-caching
-		div.firstChild.className = "i";
+		// Catch className over-caching
+		div.firstChild.classNameName = "i";
 		// Support: Opera<10
-		// Catch gEBCN failure to find non-leading classes
-		return div.getElementsByClassName("i").length === 2;
+		// Catch gEBCN failure to find non-leading classNamees
+		return div.getElementsByclassNameName("i").length === 2;
 	});
 
 	// Support: IE<10
@@ -1581,10 +1581,10 @@ setDocument = Sizzle.setDocument = function( node ) {
 			return results;
 		};
 
-	// Class
-	Expr.find["CLASS"] = support.getElementsByClassName && function( className, context ) {
-		if ( typeof context.getElementsByClassName !== strundefined && documentIsHTML ) {
-			return context.getElementsByClassName( className );
+	// className
+	Expr.find["className"] = support.getElementsByclassNameName && function( classNameName, context ) {
+		if ( typeof context.getElementsByclassNameName !== strundefined && documentIsHTML ) {
+			return context.getElementsByclassNameName( classNameName );
 		}
 	};
 
@@ -2034,13 +2034,13 @@ Expr = Sizzle.selectors = {
 				};
 		},
 
-		"CLASS": function( className ) {
-			var pattern = classCache[ className + " " ];
+		"className": function( classNameName ) {
+			var pattern = classNameCache[ classNameName + " " ];
 
 			return pattern ||
-				(pattern = new RegExp( "(^|" + whitespace + ")" + className + "(" + whitespace + "|$)" )) &&
-				classCache( className, function( elem ) {
-					return pattern.test( typeof elem.className === "string" && elem.className || typeof elem.getAttribute !== strundefined && elem.getAttribute("class") || "" );
+				(pattern = new RegExp( "(^|" + whitespace + ")" + classNameName + "(" + whitespace + "|$)" )) &&
+				classNameCache( classNameName, function( elem ) {
+					return pattern.test( typeof elem.classNameName === "string" && elem.classNameName || typeof elem.getAttribute !== strundefined && elem.getAttribute("className") || "" );
 				});
 		},
 
@@ -2158,8 +2158,8 @@ Expr = Sizzle.selectors = {
 		},
 
 		"PSEUDO": function( pseudo, argument ) {
-			// pseudo-class names are case-insensitive
-			// http://www.w3.org/TR/selectors/#pseudo-classes
+			// pseudo-className names are case-insensitive
+			// http://www.w3.org/TR/selectors/#pseudo-classNamees
 			// Prioritize by case sensitivity in case custom pseudos are added with uppercase letters
 			// Remember that setFilters inherits from pseudos
 			var args,
@@ -3336,7 +3336,7 @@ jQuery.support = (function( support ) {
 		div = document.createElement("div");
 
 	// Setup
-	div.setAttribute( "className", "t" );
+	div.setAttribute( "classNameName", "t" );
 	div.innerHTML = "  <link/><table></table><a href='/a'>a</a><input type='checkbox'/>";
 
 	// Finish early in limited (non-browser) environments
@@ -3353,8 +3353,8 @@ jQuery.support = (function( support ) {
 
 	a.style.cssText = "top:1px;float:left;opacity:.5";
 
-	// Test setAttribute on camelCase class. If it works, we need attrFixes when doing get/setAttribute (ie6/7)
-	support.getSetAttribute = div.className !== "t";
+	// Test setAttribute on camelCase className. If it works, we need attrFixes when doing get/setAttribute (ie6/7)
+	support.getSetAttribute = div.classNameName !== "t";
 
 	// IE strips leading whitespace when .innerHTML is used
 	support.leadingWhitespace = div.firstChild.nodeType === 3;
@@ -3802,7 +3802,7 @@ jQuery.extend({
 		var noData = elem.nodeName && jQuery.noData[ elem.nodeName.toLowerCase() ];
 
 		// nodes accept data unless otherwise specified; rejection can be conditional
-		return !noData || noData !== true && elem.getAttribute("classid") === noData;
+		return !noData || noData !== true && elem.getAttribute("classNameid") === noData;
 	}
 });
 
@@ -4059,7 +4059,7 @@ jQuery.fn.extend({
 	}
 });
 var nodeHook, boolHook,
-	rclass = /[\t\r\n\f]/g,
+	rclassName = /[\t\r\n\f]/g,
 	rreturn = /\r/g,
 	rfocusable = /^(?:input|select|textarea|button|object)$/i,
 	rclickable = /^(?:a|area)$/i,
@@ -4093,37 +4093,37 @@ jQuery.fn.extend({
 		});
 	},
 
-	addClass: function( value ) {
-		var classes, elem, cur, clazz, j,
+	addclassName: function( value ) {
+		var classNamees, elem, cur, clazz, j,
 			i = 0,
 			len = this.length,
 			proceed = typeof value === "string" && value;
 
 		if ( jQuery.isFunction( value ) ) {
 			return this.each(function( j ) {
-				jQuery( this ).addClass( value.call( this, j, this.className ) );
+				jQuery( this ).addclassName( value.call( this, j, this.classNameName ) );
 			});
 		}
 
 		if ( proceed ) {
-			// The disjunction here is for better compressibility (see removeClass)
-			classes = ( value || "" ).match( core_rnotwhite ) || [];
+			// The disjunction here is for better compressibility (see removeclassName)
+			classNamees = ( value || "" ).match( core_rnotwhite ) || [];
 
 			for ( ; i < len; i++ ) {
 				elem = this[ i ];
-				cur = elem.nodeType === 1 && ( elem.className ?
-					( " " + elem.className + " " ).replace( rclass, " " ) :
+				cur = elem.nodeType === 1 && ( elem.classNameName ?
+					( " " + elem.classNameName + " " ).replace( rclassName, " " ) :
 					" "
 				);
 
 				if ( cur ) {
 					j = 0;
-					while ( (clazz = classes[j++]) ) {
+					while ( (clazz = classNamees[j++]) ) {
 						if ( cur.indexOf( " " + clazz + " " ) < 0 ) {
 							cur += clazz + " ";
 						}
 					}
-					elem.className = jQuery.trim( cur );
+					elem.classNameName = jQuery.trim( cur );
 
 				}
 			}
@@ -4132,37 +4132,37 @@ jQuery.fn.extend({
 		return this;
 	},
 
-	removeClass: function( value ) {
-		var classes, elem, cur, clazz, j,
+	removeclassName: function( value ) {
+		var classNamees, elem, cur, clazz, j,
 			i = 0,
 			len = this.length,
 			proceed = arguments.length === 0 || typeof value === "string" && value;
 
 		if ( jQuery.isFunction( value ) ) {
 			return this.each(function( j ) {
-				jQuery( this ).removeClass( value.call( this, j, this.className ) );
+				jQuery( this ).removeclassName( value.call( this, j, this.classNameName ) );
 			});
 		}
 		if ( proceed ) {
-			classes = ( value || "" ).match( core_rnotwhite ) || [];
+			classNamees = ( value || "" ).match( core_rnotwhite ) || [];
 
 			for ( ; i < len; i++ ) {
 				elem = this[ i ];
-				// This expression is here for better compressibility (see addClass)
-				cur = elem.nodeType === 1 && ( elem.className ?
-					( " " + elem.className + " " ).replace( rclass, " " ) :
+				// This expression is here for better compressibility (see addclassName)
+				cur = elem.nodeType === 1 && ( elem.classNameName ?
+					( " " + elem.classNameName + " " ).replace( rclassName, " " ) :
 					""
 				);
 
 				if ( cur ) {
 					j = 0;
-					while ( (clazz = classes[j++]) ) {
+					while ( (clazz = classNamees[j++]) ) {
 						// Remove *all* instances
 						while ( cur.indexOf( " " + clazz + " " ) >= 0 ) {
 							cur = cur.replace( " " + clazz + " ", " " );
 						}
 					}
-					elem.className = value ? jQuery.trim( cur ) : "";
+					elem.classNameName = value ? jQuery.trim( cur ) : "";
 				}
 			}
 		}
@@ -4170,58 +4170,58 @@ jQuery.fn.extend({
 		return this;
 	},
 
-	toggleClass: function( value, stateVal ) {
+	toggleclassName: function( value, stateVal ) {
 		var type = typeof value;
 
 		if ( typeof stateVal === "boolean" && type === "string" ) {
-			return stateVal ? this.addClass( value ) : this.removeClass( value );
+			return stateVal ? this.addclassName( value ) : this.removeclassName( value );
 		}
 
 		if ( jQuery.isFunction( value ) ) {
 			return this.each(function( i ) {
-				jQuery( this ).toggleClass( value.call(this, i, this.className, stateVal), stateVal );
+				jQuery( this ).toggleclassName( value.call(this, i, this.classNameName, stateVal), stateVal );
 			});
 		}
 
 		return this.each(function() {
 			if ( type === "string" ) {
-				// toggle individual class names
-				var className,
+				// toggle individual className names
+				var classNameName,
 					i = 0,
 					self = jQuery( this ),
-					classNames = value.match( core_rnotwhite ) || [];
+					classNameNames = value.match( core_rnotwhite ) || [];
 
-				while ( (className = classNames[ i++ ]) ) {
-					// check each className given, space separated list
-					if ( self.hasClass( className ) ) {
-						self.removeClass( className );
+				while ( (classNameName = classNameNames[ i++ ]) ) {
+					// check each classNameName given, space separated list
+					if ( self.hasclassName( classNameName ) ) {
+						self.removeclassName( classNameName );
 					} else {
-						self.addClass( className );
+						self.addclassName( classNameName );
 					}
 				}
 
-			// Toggle whole class name
+			// Toggle whole className name
 			} else if ( type === core_strundefined || type === "boolean" ) {
-				if ( this.className ) {
-					// store className if set
-					jQuery._data( this, "__className__", this.className );
+				if ( this.classNameName ) {
+					// store classNameName if set
+					jQuery._data( this, "__classNameName__", this.classNameName );
 				}
 
-				// If the element has a class name or if we're passed "false",
-				// then remove the whole classname (if there was one, the above saved it).
+				// If the element has a className name or if we're passed "false",
+				// then remove the whole classNamename (if there was one, the above saved it).
 				// Otherwise bring back whatever was previously saved (if anything),
 				// falling back to the empty string if nothing was stored.
-				this.className = this.className || value === false ? "" : jQuery._data( this, "__className__" ) || "";
+				this.classNameName = this.classNameName || value === false ? "" : jQuery._data( this, "__classNameName__" ) || "";
 			}
 		});
 	},
 
-	hasClass: function( selector ) {
-		var className = " " + selector + " ",
+	hasclassName: function( selector ) {
+		var classNameName = " " + selector + " ",
 			i = 0,
 			l = this.length;
 		for ( ; i < l; i++ ) {
-			if ( this[i].nodeType === 1 && (" " + this[i].className + " ").replace(rclass, " ").indexOf( className ) >= 0 ) {
+			if ( this[i].nodeType === 1 && (" " + this[i].classNameName + " ").replace(rclassName, " ").indexOf( classNameName ) >= 0 ) {
 				return true;
 			}
 		}
@@ -4458,7 +4458,7 @@ jQuery.extend({
 
 	propFix: {
 		"for": "htmlFor",
-		"class": "className"
+		"className": "classNameName"
 	},
 
 	prop: function( elem, name, value ) {
@@ -6397,7 +6397,7 @@ function fixCloneNodeIssues( src, dest ) {
 		disableScript( dest ).text = src.text;
 		restoreScript( dest );
 
-	// IE6-10 improperly clones children of object elements using classid.
+	// IE6-10 improperly clones children of object elements using classNameid.
 	// IE10 throws NoModificationAllowedError if parent is null, #12132.
 	} else if ( nodeName === "object" ) {
 		if ( dest.parentNode ) {
