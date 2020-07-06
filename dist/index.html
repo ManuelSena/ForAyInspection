@@ -1,10 +1,159 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
-
-<script type="text/javascript" src="manifest.js?2815d63e9af7fe1032d1"></script><script type="text/javascript" src="vendor.js?2815d63e9af7fe1032d1"></script><script type="text/javascript" src="app.js?2815d63e9af7fe1032d1"></script><script type="text/javascript" src="vendorStyles.js?2815d63e9af7fe1032d1"></script><script type="text/javascript" src="appStyles.js?2815d63e9af7fe1032d1"></script></body>
-</html>
+Html Webpack Plugin:
+<pre>
+  Error: Child compilation failed:
+  Entry module not found: SyntaxError: C:\Projects\ForAyInspection\ForAyInspecti  on\package.json (directory description file): SyntaxError: C:\Projects\ForAyIn  spection\ForAyInspection\package.json (directory description file): SyntaxErro  r: C:\Projects\ForAyInspection\ForAyInspection\package.json (directory descrip  tion file): SyntaxError: C:\Projects\ForAyInspection\ForAyInspection\package.j  son (directory description file): SyntaxError: C:\Projects\ForAyInspection\For  AyInspection\package.json (directory description file): SyntaxError: C:\Projec  ts\ForAyInspection\ForAyInspection\package.json (directory description file):   SyntaxError: C:\Projects\ForAyInspection\ForAyInspection\package.json (directo  ry description file): SyntaxError: C:\Projects\ForAyInspection\ForAyInspection  \package.json (directory description file): SyntaxError: C:\Projects\ForAyInsp  ection\ForAyInspection\package.json (directory description file): SyntaxError:   C:\Projects\ForAyInspection\ForAyInspection\package.json (directory descripti  on file): SyntaxError: C:\Projects\ForAyInspection\ForAyInspection\package.jso  n (directory description file): SyntaxError: C:\Projects\ForAyInspection\ForAy  Inspection\package.json (directory description file): SyntaxError: C:\Projects  \ForAyInspection\ForAyInspection\package.json (directory description file): Sy  ntaxError: C:\Projects\ForAyInspection\ForAyInspection\package.json (directory   description file): SyntaxError: Unexpected token } in JSON at position 177:
+  SyntaxError: C:\Projects\ForAyInspection\ForAyInspection\package.json (directo  ry description file): SyntaxError: C:\Projects\ForAyInspection\ForAyInspection  \package.json (directory description file): SyntaxError: C:\Projects\ForAyInsp  ection\ForAyInspection\package.json (directory description file): SyntaxError:   C:\Projects\ForAyInspection\ForAyInspection\package.json (directory descripti  on file): SyntaxError: C:\Projects\ForAyInspection\ForAyInspection\package.jso  n (directory description file): SyntaxError: C:\Projects\ForAyInspection\ForAy  Inspection\package.json (directory description file): SyntaxError: C:\Projects  \ForAyInspection\ForAyInspection\package.json (directory description file): Sy  ntaxError: C:\Projects\ForAyInspection\ForAyInspection\package.json (directory   description file): SyntaxError: C:\Projects\ForAyInspection\ForAyInspection\p  ackage.json (directory description file): SyntaxError: C:\Projects\ForAyInspec  tion\ForAyInspection\package.json (directory description file): SyntaxError: C  :\Projects\ForAyInspection\ForAyInspection\package.json (directory description   file): SyntaxError: C:\Projects\ForAyInspection\ForAyInspection\package.json   (directory description file): SyntaxError: C:\Projects\ForAyInspection\ForAyIn  spection\package.json (directory description file): SyntaxError: C:\Projects\F  orAyInspection\ForAyInspection\package.json (directory description file): Synt  axError: Unexpected token } in JSON at position 177
+  
+  - compiler.js:76 
+    [ForAyInspection]/[html-webpack-plugin]/lib/compiler.js:76:16
+  
+  - Compiler.js:300 compile
+    [ForAyInspection]/[webpack]/lib/Compiler.js:300:11
+  
+  - Compiler.js:510 applyPluginsAsync.err
+    [ForAyInspection]/[webpack]/lib/Compiler.js:510:14
+  
+  - Tapable.js:202 next
+    [ForAyInspection]/[tapable]/lib/Tapable.js:202:11
+  
+  - CachePlugin.js:78 Compiler.<anonymous>
+    [ForAyInspection]/[webpack]/lib/CachePlugin.js:78:5
+  
+  - Tapable.js:206 Compiler.applyPluginsAsyncSeries
+    [ForAyInspection]/[tapable]/lib/Tapable.js:206:13
+  
+  - Compiler.js:507 compilation.seal.err
+    [ForAyInspection]/[webpack]/lib/Compiler.js:507:11
+  
+  - Tapable.js:195 Compilation.applyPluginsAsyncSeries
+    [ForAyInspection]/[tapable]/lib/Tapable.js:195:46
+  
+  - Compilation.js:683 applyPluginsAsync.err
+    [ForAyInspection]/[webpack]/lib/Compilation.js:683:19
+  
+  - Tapable.js:195 Compilation.applyPluginsAsyncSeries
+    [ForAyInspection]/[tapable]/lib/Tapable.js:195:46
+  
+  - Compilation.js:674 applyPluginsAsync.err
+    [ForAyInspection]/[webpack]/lib/Compilation.js:674:11
+  
+  - Tapable.js:195 Compilation.applyPluginsAsyncSeries
+    [ForAyInspection]/[tapable]/lib/Tapable.js:195:46
+  
+  - Compilation.js:669 applyPluginsAsync.err
+    [ForAyInspection]/[webpack]/lib/Compilation.js:669:10
+  
+  - Tapable.js:195 Compilation.applyPluginsAsyncSeries
+    [ForAyInspection]/[tapable]/lib/Tapable.js:195:46
+  
+  - Compilation.js:665 applyPluginsAsyncSeries
+    [ForAyInspection]/[webpack]/lib/Compilation.js:665:9
+  
+  - Tapable.js:195 Compilation.applyPluginsAsyncSeries
+    [ForAyInspection]/[tapable]/lib/Tapable.js:195:46
+  
+  - Compilation.js:608 Compilation.seal
+    [ForAyInspection]/[webpack]/lib/Compilation.js:608:8
+  
+  - Compiler.js:504 applyPluginsParallel.err
+    [ForAyInspection]/[webpack]/lib/Compiler.js:504:17
+  
+  - Tapable.js:289 
+    [ForAyInspection]/[tapable]/lib/Tapable.js:289:11
+  
+  - Compilation.js:511 _addModuleChain
+    [ForAyInspection]/[webpack]/lib/Compilation.js:511:11
+  
+  - Compilation.js:394 errorAndCallback.bail
+    [ForAyInspection]/[webpack]/lib/Compilation.js:394:4
+  
+  - Compilation.js:417 moduleFactory.create
+    [ForAyInspection]/[webpack]/lib/Compilation.js:417:13
+  
+  - NormalModuleFactory.js:237 factory
+    [ForAyInspection]/[webpack]/lib/NormalModuleFactory.js:237:20
+  
+  - NormalModuleFactory.js:60 resolver
+    [ForAyInspection]/[webpack]/lib/NormalModuleFactory.js:60:20
+  
+  - NormalModuleFactory.js:127 asyncLib.parallel
+    [ForAyInspection]/[webpack]/lib/NormalModuleFactory.js:127:20
+  
+  - async.js:3888 
+    [ForAyInspection]/[async]/dist/async.js:3888:9
+  
+  - async.js:473 
+    [ForAyInspection]/[async]/dist/async.js:473:16
+  
+  - async.js:1062 iteratorCallback
+    [ForAyInspection]/[async]/dist/async.js:1062:13
+  
+  - async.js:969 
+    [ForAyInspection]/[async]/dist/async.js:969:16
+  
+  - async.js:3885 
+    [ForAyInspection]/[async]/dist/async.js:3885:13
+  
+  - From previous event:
+  
+  - compiler.js:69 Object.compileTemplate
+    [ForAyInspection]/[html-webpack-plugin]/lib/compiler.js:69:10
+  
+  - index.js:47 Compiler.<anonymous>
+    [ForAyInspection]/[html-webpack-plugin]/index.js:47:40
+  
+  - Tapable.js:293 Compiler.applyPluginsParallel
+    [ForAyInspection]/[tapable]/lib/Tapable.js:293:14
+  
+  - Compiler.js:499 applyPluginsAsync.err
+    [ForAyInspection]/[webpack]/lib/Compiler.js:499:9
+  
+  - Tapable.js:195 Compiler.applyPluginsAsyncSeries
+    [ForAyInspection]/[tapable]/lib/Tapable.js:195:46
+  
+  - Compiler.js:492 Compiler.compile
+    [ForAyInspection]/[webpack]/lib/Compiler.js:492:8
+  
+  - Compiler.js:279 readRecords.err
+    [ForAyInspection]/[webpack]/lib/Compiler.js:279:11
+  
+  - Compiler.js:391 Compiler.readRecords
+    [ForAyInspection]/[webpack]/lib/Compiler.js:391:11
+  
+  - Compiler.js:276 applyPluginsAsync.err
+    [ForAyInspection]/[webpack]/lib/Compiler.js:276:10
+  
+  - Tapable.js:202 next
+    [ForAyInspection]/[tapable]/lib/Tapable.js:202:11
+  
+  - CachePlugin.js:51 Compiler.compiler.plugin
+    [ForAyInspection]/[webpack]/lib/CachePlugin.js:51:59
+  
+  - Tapable.js:206 Compiler.applyPluginsAsyncSeries
+    [ForAyInspection]/[tapable]/lib/Tapable.js:206:13
+  
+  - Compiler.js:273 applyPluginsAsync.err
+    [ForAyInspection]/[webpack]/lib/Compiler.js:273:9
+  
+  - Tapable.js:202 next
+    [ForAyInspection]/[tapable]/lib/Tapable.js:202:11
+  
+  - NodeEnvironmentPlugin.js:21 Compiler.compiler.plugin
+    [ForAyInspection]/[webpack]/lib/node/NodeEnvironmentPlugin.js:21:4
+  
+  - Tapable.js:206 Compiler.applyPluginsAsyncSeries
+    [ForAyInspection]/[tapable]/lib/Tapable.js:206:13
+  
+  - Compiler.js:270 Compiler.run
+    [ForAyInspection]/[webpack]/lib/Compiler.js:270:8
+  
+  - webpack.js:393 processOptions
+    [ForAyInspection]/[webpack]/bin/webpack.js:393:13
+  
+  - webpack.js:397 yargs.parse
+    [ForAyInspection]/[webpack]/bin/webpack.js:397:2
+  
+  - yargs.js:533 Object.Yargs.self.parse
+    [ForAyInspection]/[yargs]/yargs.js:533:18
+  
+</pre><script type="text/javascript" src="manifest.js?ca55d9992e108191d533"></script><script type="text/javascript" src="vendor.js?ca55d9992e108191d533"></script><script type="text/javascript" src="vendorStyles.js?ca55d9992e108191d533"></script>
