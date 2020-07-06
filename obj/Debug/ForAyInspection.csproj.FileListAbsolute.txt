@@ -1,3 +1,9 @@
+C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\System.IO.Compression.dll
+C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\VBCSCompiler.exe
 C:\Projects\ForAyInspection\ForAyInspection\bin\ForAyInspection.dll.config
 C:\Projects\ForAyInspection\ForAyInspection\bin\ForAyInspection.dll
 C:\Projects\ForAyInspection\ForAyInspection\bin\ForAyInspection.pdb
@@ -8,13 +14,9 @@ C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\csi.exe
 C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\csi.exe.config
 C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\csi.rsp
 C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
 C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\Microsoft.CodeAnalysis.dll
 C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
 C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
 C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
 C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\Microsoft.VisualBasic.Core.targets
 C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\Microsoft.Win32.Primitives.dll
@@ -24,7 +26,6 @@ C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\System.Console.dll
 C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
 C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\System.Diagnostics.Process.dll
 C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\System.IO.Compression.dll
 C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\System.IO.FileSystem.dll
 C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
 C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\System.IO.FileSystem.Primitives.dll
@@ -47,7 +48,6 @@ C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\System.Xml.XPath.XDocumen
 C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\vbc.exe
 C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\vbc.exe.config
 C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\vbc.rsp
-C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\VBCSCompiler.exe
 C:\Projects\ForAyInspection\ForAyInspection\bin\roslyn\VBCSCompiler.exe.config
 C:\Projects\ForAyInspection\ForAyInspection\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Projects\ForAyInspection\ForAyInspection\bin\Microsoft.Practices.ServiceLocation.dll
@@ -88,8 +88,8 @@ C:\Projects\ForAyInspection\ForAyInspection\bin\System.Web.WebPages.xml
 C:\Projects\ForAyInspection\ForAyInspection\bin\System.Web.WebPages.Deployment.xml
 C:\Projects\ForAyInspection\ForAyInspection\bin\System.Web.WebPages.Razor.xml
 C:\Projects\ForAyInspection\ForAyInspection\bin\Newtonsoft.Json.xml
+C:\Projects\ForAyInspection\ForAyInspection\obj\Debug\ForAyInspection.csprojResolveAssemblyReference.cache
 C:\Projects\ForAyInspection\ForAyInspection\obj\Debug\ForAyInspection.csproj.CoreCompileInputs.cache
 C:\Projects\ForAyInspection\ForAyInspection\obj\Debug\ForAyInspection.csproj.CopyComplete
 C:\Projects\ForAyInspection\ForAyInspection\obj\Debug\ForAyInspection.dll
 C:\Projects\ForAyInspection\ForAyInspection\obj\Debug\ForAyInspection.pdb
-C:\Projects\ForAyInspection\ForAyInspection\obj\Debug\ForAyInspection.csprojResolveAssemblyReference.cache

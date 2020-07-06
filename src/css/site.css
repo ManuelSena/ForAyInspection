@@ -123,7 +123,7 @@ address {
     background-attachment: scroll;
     background-position: left;
     background-size: 25%;
-    background-image: url('../../assets/img/clipartAWS.png');
+    background-image: url('../../assets/img/clipart1838501 (1).png');
 }
 
     .welding h4 {
@@ -141,7 +141,7 @@ address {
     background-attachment: scroll;
     background-position: left;
     background-size: 20%;
-    background-image: url('../../assets/img/navy.png');
+    background-image: url('../../assets/img/white-black-and-yellow-lion-logo-united-states-navy-us-navy-department-military-sailor-military-png-clip-art-thumbnail.png');
 }
 
     .vetpwnd h4 {
@@ -159,7 +159,7 @@ address {
     background-attachment: scroll;
     background-position: left;
     background-size: 15%;
-    background-image: url('../../assets/img/californiaclipart.png');
+    background-image: url('../../assets/img/california-clipart-3-transparent (2).png');
 }
 
     .cali h4 {
@@ -10080,7 +10080,7 @@ header.masthead {
     padding-bottom: 6rem;
     text-align: center;
     color: #fff;
-    background-image: url('../../assets/img/4a.gif');
+    background-image: url('../../assets/img/gif_temp_16130661046762.gif');
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: center center;
@@ -10155,6 +10155,7 @@ header.masthead {
 }*/
 #contact {
     background-color: #212529;
+    background-image: url("../assets/img/map-image.png");
     background-repeat: no-repeat;
     background-position: center;
 }
